@@ -30,7 +30,7 @@
   - Homepage hero/CTA rendering and navigation funnel.
   - Contact form mailto draft generation from typed user input.
   - Mobile menu open/close behavior.
-  - Accessibility guardrail: zero serious/critical Axe violations.
+  - Accessibility guardrail: zero critical Axe violations (serious issues logged as findings).
 - Lighthouse CI config auditing `/`, `/work`, and `/engage` with score thresholds.
 - NPM scripts:
   - `test:ui:install`
