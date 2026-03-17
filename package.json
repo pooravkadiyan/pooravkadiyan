@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:ui:install": "playwright install chromium",
+    "test:ui": "playwright test",
+    "test:ux": "lhci autorun --config=./lighthouserc.json",
+    "test:uiux": "npm run test:ui && npm run test:ux"
   },
   "dependencies": {
     "next": "^14.2.0",
@@ -14,6 +18,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.52.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
