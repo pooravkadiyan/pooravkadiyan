@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ===== BACKGROUNDS ===== */
+  --bg-primary: #07070b;
+  --bg-surface: #0f0f16;
+  --bg-elevated: #141425;
+  --bg-border: rgba(255, 255, 255, 0.065);
+
+  /* ===== TEXT ===== */
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-secondary: rgba(235, 238, 255, 0.62);
+  --text-muted: rgba(235, 238, 255, 0.38);
+
+  /* ===== ACCENT — ELECTRIC BLUE ===== */
+  --accent-blue: #2de3ff;
+  --accent-blue-dim: rgba(45, 227, 255, 0.12);
+  --accent-blue-glow: rgba(45, 227, 255, 0.18);
+
+  /* ===== ACCENT — GOLD ===== */
+  --accent-gold: #d8b15a;
+  --accent-gold-dim: rgba(216, 177, 90, 0.12);
+
+  /* ===== FUNCTIONAL ===== */
+  --success: #00c48c;
+  --warning: #ffb830;
+  --error: #ff4d6d;
+
+  /* App-level conveniences */
+  --ring: rgba(45, 227, 255, 0.55);
+
+  /* ===== RADIUS / SHADOW / MOTION ===== */
+  --radius-1: 6px;
+  --radius-2: 12px;
+  --radius-3: 18px;
+
+  --shadow-soft: 0 16px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow-blue: 0 0 0 1px rgba(45, 227, 255, 0.12),
+    0 28px 80px rgba(45, 227, 255, 0.08);
+  --shadow-glow-gold: 0 0 0 1px rgba(216, 177, 90, 0.13),
+    0 28px 80px rgba(216, 177, 90, 0.07);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 140ms;
+  --dur-2: 220ms;
+
+  /* ===== GLASS ===== */
+  --glass-bg: rgba(10, 10, 18, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(
+      1200px 800px at 18% 12%,
+      rgba(45, 227, 255, 0.12),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 700px at 78% 18%,
+      rgba(216, 177, 90, 0.11),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 900px at 62% 78%,
+      rgba(138, 92, 255, 0.08),
+      transparent 60%
+    ),
+    var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body), system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.11;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(45, 227, 255, 0.18);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--dur-2) var(--ease-out),
+    transform var(--dur-2) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal[data-revealed="true"] {
+  opacity: 1;
+  transform: translateY(0);
 }
