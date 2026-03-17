@@ -1,6 +1,6 @@
 # Advanced UI/UX testing + improvement suggestions report
 
-Generated: 2026-03-17T15:03:20.668Z
+Generated: 2026-03-17T15:09:29.377Z
 
 ## Scope
 
@@ -13,13 +13,13 @@ Generated: 2026-03-17T15:03:20.668Z
 | --- | --- | --- | --- | --- |
 | `/` | 0.93 | 0.96 | 1.00 | 0.91 |
 | `/work` | 0.94 | 0.95 | 1.00 | 0.91 |
-| `/engage` | 0.93 | 0.96 | 1.00 | 1.00 |
+| `/engage` | 0.94 | 0.96 | 1.00 | 1.00 |
 
 ## Mobile Lighthouse scores
 
 | URL | Performance | Accessibility | Best Practices | SEO |
 | --- | --- | --- | --- | --- |
-| `/` | 0.68 | 0.96 | 1.00 | 0.91 |
+| `/` | 0.69 | 0.96 | 1.00 | 0.91 |
 | `/work` | 0.73 | 0.95 | 1.00 | 0.91 |
 | `/engage` | 0.68 | 0.96 | 1.00 | 1.00 |
 
@@ -27,30 +27,30 @@ Generated: 2026-03-17T15:03:20.668Z
 
 | URL | LCP | TBT | CLS |
 | --- | --- | --- | --- |
-| `/` | 744 ms | 201 ms | 0.000 |
-| `/work` | 616 ms | 196 ms | 0.000 |
-| `/engage` | 744 ms | 202 ms | 0.000 |
-| `/` | 3622 ms | 960 ms | 0.000 |
-| `/work` | 3016 ms | 929 ms | 0.000 |
-| `/engage` | 3613 ms | 973 ms | 0.000 |
+| `/` | 752 ms | 201 ms | 0.000 |
+| `/work` | 588 ms | 198 ms | 0.000 |
+| `/engage` | 732 ms | 194 ms | 0.000 |
+| `/` | 3614 ms | 927 ms | 0.000 |
+| `/work` | 3011 ms | 955 ms | 0.000 |
+| `/engage` | 3660 ms | 931 ms | 0.000 |
 
 ## Top performance opportunities from Lighthouse
 
 | URL | Audit ID | Opportunity | Estimated savings |
 | --- | --- | --- | --- |
-| `/` | `server-response-time` | Reduce initial server response time | 698 ms |
-| `/` | `unused-javascript` | Reduce unused JavaScript | 80 ms |
-| `/work` | `server-response-time` | Initial server response time was short | 156 ms |
-| `/work` | `unused-javascript` | Reduce unused JavaScript | 80 ms |
-| `/engage` | `server-response-time` | Initial server response time was short | 95 ms |
+| `/` | `server-response-time` | Reduce initial server response time | 694 ms |
+| `/` | `unused-javascript` | Reduce unused JavaScript | 90 ms |
+| `/work` | `server-response-time` | Initial server response time was short | 173 ms |
+| `/work` | `unused-javascript` | Reduce unused JavaScript | 50 ms |
+| `/engage` | `server-response-time` | Initial server response time was short | 107 ms |
 | `/engage` | `unused-javascript` | Reduce unused JavaScript | 80 ms |
-| `/` | `server-response-time` | Reduce initial server response time | 667 ms |
+| `/` | `server-response-time` | Reduce initial server response time | 631 ms |
 | `/` | `unused-javascript` | Reduce unused JavaScript | 450 ms |
-| `/work` | `unused-javascript` | Reduce unused JavaScript | 440 ms |
+| `/work` | `unused-javascript` | Reduce unused JavaScript | 450 ms |
 | `/work` | `unminified-javascript` | Minify JavaScript | 150 ms |
 | `/work` | `server-response-time` | Initial server response time was short | 150 ms |
-| `/engage` | `unused-javascript` | Reduce unused JavaScript | 450 ms |
-| `/engage` | `server-response-time` | Initial server response time was short | 94 ms |
+| `/engage` | `unused-javascript` | Reduce unused JavaScript | 490 ms |
+| `/engage` | `server-response-time` | Initial server response time was short | 86 ms |
 
 ## Prioritized improvement suggestions
 
