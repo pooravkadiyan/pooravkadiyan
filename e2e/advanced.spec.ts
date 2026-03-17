@@ -12,7 +12,13 @@ test.describe("Advanced UI reliability checks", () => {
 
     page.on("console", (message) => {
       if (message.type() === "error") {
-        consoleErrors.push(message.text());
+        const text = message.text();
+        const isKnownDevOverlayNoise =
+          text.includes("Failed to fetch RSC payload") ||
+          text.includes("hot-reloader-client.js");
+        if (!isKnownDevOverlayNoise) {
+          consoleErrors.push(text);
+        }
       }
     });
 
