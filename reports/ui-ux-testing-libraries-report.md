@@ -66,3 +66,9 @@ Use this stack as the default quality gate in CI:
 2. `npm run test:ux`
 
 Then add visual regression (Chromatic) as phase 2 when component-level design drift starts appearing in reviews.
+
+## Advanced follow-up
+
+For deeper route reliability, keyboard UX checks, desktop/mobile Lighthouse profiling, and prioritized improvement actions, see:
+
+- `reports/ui-ux-improvements-suggestions-report.md`
