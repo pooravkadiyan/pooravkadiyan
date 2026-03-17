@@ -24,8 +24,10 @@ test.describe("Advanced UI reliability checks", () => {
 
     page.on("requestfailed", (request) => {
       const url = request.url();
-      if (url.startsWith("http://127.0.0.1:3100")) {
-        failedRequests.push(`${request.failure()?.errorText ?? "unknown"}: ${url}`);
+      const errorText = request.failure()?.errorText ?? "unknown";
+      const isAbortedRscRequest = errorText.includes("ERR_ABORTED") && url.includes("_rsc=");
+      if (url.startsWith("http://127.0.0.1:3100") && !isAbortedRscRequest) {
+        failedRequests.push(`${errorText}: ${url}`);
       }
     });
 
