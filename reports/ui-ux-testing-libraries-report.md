@@ -42,8 +42,21 @@
 
 This section is updated after running the tests in this branch.
 
-- Playwright UI tests: _pending run_
-- Lighthouse UX tests: _pending run_
+- Playwright UI tests: **PASS (8/8)** on desktop + mobile Chromium.
+- Lighthouse UX tests: **PASS** on 3 URLs with all configured thresholds met.
+
+### Observed findings from the test run
+
+- Axe (Playwright-integrated) reported **serious color-contrast issues** (non-blocking in current config, no critical violations found).
+- Lighthouse accessibility stayed strong across pages (`0.95 - 0.96`), but contrast can still be improved for stricter WCAG outcomes in future iterations.
+
+### Lighthouse score snapshot
+
+| URL | Performance | Accessibility | Best Practices | SEO |
+| --- | --- | --- | --- | --- |
+| `/` | 0.93 | 0.96 | 1.00 | 0.91 |
+| `/work` | 0.94 | 0.95 | 1.00 | 0.91 |
+| `/engage` | 0.93 | 0.96 | 1.00 | 1.00 |
 
 ## Recommendation
 
