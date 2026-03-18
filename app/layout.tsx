@@ -7,16 +7,22 @@ import { SiteHeader } from "@/components/site-header";
 const fontDisplay = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const fontBody = Inter({
   variable: "--font-body",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const fontMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {

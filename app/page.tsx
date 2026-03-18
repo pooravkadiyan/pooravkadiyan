@@ -3,16 +3,15 @@ import { SectionLabel } from "@/components/section-label";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tag } from "@/components/ui/tag";
-import { ScrollReveal } from "@/components/scroll-reveal";
 import { homeCopy } from "@/content/site-copy";
-import { ContactForm } from "@/components/contact-form";
+import { LazyContactForm } from "@/components/lazy-contact-form";
 
 export default function Home() {
   return (
     <div className="bg-[var(--bg-primary)]">
       <PageShell className="py-20 md:py-28">
         <div className="grid gap-10 md:grid-cols-[1.15fr_0.85fr] md:items-start">
-          <ScrollReveal className="space-y-7">
+          <div className="space-y-7">
             <SectionLabel tone="blue">{homeCopy.hero.label}</SectionLabel>
             <h1 className="font-[var(--font-display)] text-[44px] leading-[1.02] tracking-[-0.03em] text-[var(--text-primary)] md:text-[78px]">
               {homeCopy.hero.headline}
@@ -43,9 +42,9 @@ export default function Home() {
                 </Tag>
               ))}
             </div>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal delayMs={120}>
+          <div>
             <Card accent="blue" className="glass p-7">
               <div className="flex items-start justify-between gap-6">
                 <div>
@@ -72,10 +71,10 @@ export default function Home() {
                 </Button>
               </div>
             </Card>
-          </ScrollReveal>
+          </div>
         </div>
 
-        <ScrollReveal delayMs={160} className="mt-14">
+        <div className="mt-14">
           <div className="grid gap-4 md:grid-cols-4">
             {homeCopy.metrics.map((m) => (
               <div
@@ -91,10 +90,10 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </ScrollReveal>
+        </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-12">
-          <ScrollReveal className="md:col-span-7">
+        <div className="defer-render mt-16 grid gap-6 md:grid-cols-12">
+          <div className="md:col-span-7">
             <Card accent="blue">
               <SectionLabel tone="blue">THE INTELLIGENCE STACK</SectionLabel>
               <div className="mt-4 font-[var(--font-display)] text-[28px] font-semibold text-[var(--text-primary)]">
@@ -129,9 +128,9 @@ export default function Home() {
                 </Button>
               </div>
             </Card>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal delayMs={80} className="md:col-span-5">
+          <div className="md:col-span-5">
             <Card accent="gold" className="h-full">
               <SectionLabel tone="gold">ARTIFACTS</SectionLabel>
               <div className="mt-4 font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
@@ -158,9 +157,9 @@ export default function Home() {
                 </Button>
               </div>
             </Card>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal className="md:col-span-6">
+          <div className="md:col-span-6">
             <Card accent="blue">
               <SectionLabel tone="blue">SIMULATION-FIRST</SectionLabel>
               <div className="mt-4 font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
@@ -176,9 +175,9 @@ export default function Home() {
                 </Button>
               </div>
             </Card>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal delayMs={80} className="md:col-span-6">
+          <div className="md:col-span-6">
             <Card accent="gold">
               <SectionLabel tone="gold">ENGAGE</SectionLabel>
               <div className="mt-4 font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
@@ -197,10 +196,10 @@ export default function Home() {
                 </Button>
               </div>
             </Card>
-          </ScrollReveal>
+          </div>
         </div>
 
-        <ScrollReveal className="mt-16">
+        <div className="defer-render mt-16">
           <Card accent="blue" className="glass">
             <div className="grid gap-10 md:grid-cols-[1fr_1.05fr] md:items-start">
               <div className="space-y-4">
@@ -219,7 +218,7 @@ export default function Home() {
               </div>
 
               <div className="rounded-[var(--radius-3)] border border-[rgba(255,255,255,0.07)] bg-[rgba(0,0,0,0.18)] p-6">
-                <ContactForm
+                <LazyContactForm
                   toEmail="hello@pooravkadiyan.com"
                   subject="Project inquiry — scoping call"
                   ctaLabel="Draft the intro email"
@@ -227,7 +226,7 @@ export default function Home() {
               </div>
             </div>
           </Card>
-        </ScrollReveal>
+        </div>
       </PageShell>
     </div>
   );

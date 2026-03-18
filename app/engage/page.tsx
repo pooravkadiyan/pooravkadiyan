@@ -3,7 +3,7 @@ import { SectionLabel } from "@/components/section-label";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tag } from "@/components/ui/tag";
-import { ContactForm } from "@/components/contact-form";
+import { LazyContactForm } from "@/components/lazy-contact-form";
 import { engagementTiers, rateCard } from "@/content/pricing";
 import { site } from "@/content/site-copy";
 
@@ -102,7 +102,7 @@ export default function EngagePage() {
           </Card>
         </div>
 
-        <div className="mt-12">
+        <div className="defer-render mt-12">
           <Card accent="blue" className="glass">
             <div className="grid gap-10 md:grid-cols-[1fr_1.1fr] md:items-start">
               <div className="space-y-4">
@@ -120,7 +120,7 @@ export default function EngagePage() {
               </div>
 
               <div className="rounded-[var(--radius-3)] border border-[rgba(255,255,255,0.07)] bg-[rgba(0,0,0,0.18)] p-6">
-                <ContactForm
+                <LazyContactForm
                   toEmail={site.email}
                   subject="Engagement inquiry — scoping call"
                   ctaLabel="Draft the email"
@@ -130,7 +130,7 @@ export default function EngagePage() {
           </Card>
         </div>
 
-        <div className="mt-12 rounded-[4px] border border-[var(--bg-border)] bg-[var(--bg-surface)] p-8">
+        <div className="defer-render mt-12 rounded-[4px] border border-[var(--bg-border)] bg-[var(--bg-surface)] p-8">
           <SectionLabel tone="blue">PRICING</SectionLabel>
           <div className="mt-4 grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
             <div>
