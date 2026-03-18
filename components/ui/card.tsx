@@ -29,7 +29,7 @@ export function Card({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-[var(--radius-3)] bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] border border-[var(--bg-border)] p-8 transition-[transform,border-color,box-shadow] duration-[var(--dur-2)] ease-[var(--ease-out)] hover:-translate-y-[2px] hover:shadow-[var(--shadow-soft)]",
+        "relative overflow-hidden rounded-[var(--radius-3)] bg-[linear-gradient(180deg,rgba(255,255,255,0.042),rgba(255,255,255,0.015))] border border-[rgba(255,255,255,0.11)] p-8 transition-[transform,border-color,box-shadow] duration-[var(--dur-2)] ease-[var(--ease-out)] hover:-translate-y-[2px] hover:shadow-[var(--shadow-soft)]",
         "before:pointer-events-none before:absolute before:inset-0 before:opacity-0 before:transition-opacity before:duration-[var(--dur-2)] before:ease-[var(--ease-out)] before:[background:radial-gradient(800px_200px_at_10%_0%,rgba(45,227,255,0.14),transparent_55%)] hover:before:opacity-100",
         accentGlow,
         accentBorder,

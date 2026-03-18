@@ -24,11 +24,14 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-[1000] border-b border-[rgba(255,255,255,0.08)] bg-[var(--glass-bg)] backdrop-blur-[18px]">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="group flex items-baseline gap-3">
+        <Link
+          href="/"
+          className="group flex items-baseline gap-3 rounded-[var(--radius-1)] px-1 py-0.5 transition-colors hover:text-[var(--text-primary)]"
+        >
           <span className="font-[var(--font-display)] text-[13px] font-semibold tracking-[0.07em] text-[var(--text-primary)]">
             POORAV KADIYAN
           </span>
-          <span className="hidden text-[10px] font-light uppercase tracking-[0.15em] text-[var(--accent-blue)] sm:inline">
+          <span className="hidden rounded-full border border-[rgba(45,227,255,0.2)] bg-[rgba(45,227,255,0.05)] px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--accent-blue)] transition-[border-color,background-color,color] duration-[var(--dur-1)] ease-[var(--ease-out)] group-hover:border-[rgba(45,227,255,0.45)] group-hover:bg-[rgba(45,227,255,0.12)] group-hover:text-[rgba(214,247,255,0.98)] sm:inline">
             Intelligence Architect
           </span>
         </Link>
