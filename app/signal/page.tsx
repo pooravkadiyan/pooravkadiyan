@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Tag } from "@/components/ui/tag";
 
 export const metadata = {
-  title: "Signal",
+  title: "Signals",
   description:
-    "Writing and intel drops: frameworks, observations, and system notes from building intelligence architecture.",
+    "Field signals and operator notes from live decision-system deployments.",
 };
 
 const posts = [
@@ -33,13 +33,13 @@ export default function SignalPage() {
     <div className="bg-[var(--bg-primary)]">
       <PageShell className="py-16 md:py-24">
         <div className="max-w-3xl space-y-6">
-          <SectionLabel tone="blue">SIGNAL</SectionLabel>
+          <SectionLabel tone="blue">SIGNALS</SectionLabel>
           <h1 className="font-[var(--font-display)] text-[44px] leading-[1.1] text-[var(--text-primary)] md:text-[58px]">
-            Intel drops.
+            Field notes from live systems.
           </h1>
           <p className="text-[17px] leading-[1.6] text-[var(--text-secondary)]">
-            Short notes on building intelligence systems: architecture patterns,
-            operational realities, and strategy frameworks.
+            Short updates on architecture decisions, operating constraints, and
+            what actually worked in production.
           </p>
           <div className="flex flex-wrap gap-2 pt-2">
             <Tag active>Systems</Tag>

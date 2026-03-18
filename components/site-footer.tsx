@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/intelligence", label: "Intelligence" },
-  { href: "/thinking", label: "Thinking" },
-  { href: "/work", label: "Work" },
-  { href: "/signal", label: "Signal" },
+  { href: "/work", label: "Case systems" },
+  { href: "/thinking", label: "Playbooks" },
+  { href: "/signal", label: "Signals" },
+  { href: "/intelligence", label: "Services" },
   { href: "/engage", label: "Engage" },
 ] as const;
 
@@ -17,9 +17,8 @@ export function SiteFooter() {
             POORAV KADIYAN
           </div>
           <div className="max-w-md text-[13px] leading-[1.65] text-[var(--text-secondary)]">
-            Intelligence systems from data → deployed models → operational
-            workflows. Built for mid-market India and global teams that want
-            decisions to improve within days—not quarters.
+            Measurable decision systems for operators in messy environments:
+            from data and models to deployed workflows that move KPIs in weeks.
           </div>
           <div className="text-[11px] uppercase tracking-[0.12em] text-[var(--text-muted)]">
             © {new Date().getFullYear()} Poorav Kadiyan

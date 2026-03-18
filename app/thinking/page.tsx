@@ -6,9 +6,9 @@ import { Tag } from "@/components/ui/tag";
 import { frameworks } from "@/content/frameworks";
 
 export const metadata = {
-  title: "Thinking",
+  title: "Playbooks",
   description:
-    "How I think: frameworks for building compounding intelligence systems and executing in the Indian market.",
+    "Decision playbooks for scoping, shipping, and compounding intelligence systems in real operating environments.",
 };
 
 export default function ThinkingPage() {
@@ -16,13 +16,13 @@ export default function ThinkingPage() {
     <div className="bg-[var(--bg-primary)]">
       <PageShell className="py-16 md:py-24">
         <div className="max-w-3xl space-y-6">
-          <SectionLabel tone="blue">HOW I THINK</SectionLabel>
+          <SectionLabel tone="blue">PLAYBOOKS</SectionLabel>
           <h1 className="font-[var(--font-display)] text-[44px] leading-[1.1] text-[var(--text-primary)] md:text-[58px]">
-            Frameworks that turn uncertainty into execution.
+            Decision playbooks that survive real operations.
           </h1>
           <p className="text-[17px] leading-[1.6] text-[var(--text-secondary)]">
-            This is how I connect business outcomes to systems architecture—so
-            teams can ship intelligence that keeps getting better.
+            These frameworks connect business outcomes to system design so teams
+            can ship quickly and improve with each deployment cycle.
           </p>
           <div className="flex flex-wrap gap-2 pt-2">
             <Tag active>Systems thinking</Tag>
