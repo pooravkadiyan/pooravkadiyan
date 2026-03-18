@@ -38,7 +38,7 @@ export default function WorkPage() {
                 <Tag active>{c.outcome}</Tag>
                 <Tag>{c.timeframe}</Tag>
               </div>
-              <div className="font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
+              <div className="mt-3 font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
                 {c.title} - {c.context}
               </div>
               <p className="mt-3 text-[15px] leading-[1.65] text-[var(--text-secondary)]">

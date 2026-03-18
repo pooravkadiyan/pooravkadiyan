@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { homeCopy, site } from "@/content/site-copy";
 import { ContactForm } from "@/components/contact-form";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -206,7 +207,7 @@ export default function Home() {
                     href: "/signal",
                   },
                 ].map((row) => (
-                  <a
+                  <Link
                     key={row.label}
                     href={row.href}
                     className="rounded-[var(--radius-2)] border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.016)] px-4 py-3 transition-colors hover:border-[rgba(216,177,90,0.35)]"
@@ -217,7 +218,7 @@ export default function Home() {
                     <div className="mt-1 text-[13px] leading-[1.6] text-[var(--text-secondary)]">
                       {row.text}
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </Card>
