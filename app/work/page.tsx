@@ -8,7 +8,7 @@ import { caseStudyHighlights } from "@/content/case-studies";
 export const metadata = {
   title: "Work",
   description:
-    "Evidence: case studies and real intelligence systems built across AI, ops automation, and India market data.",
+    "Quantified case systems built across collections, forecasting, workflow automation, and India market intelligence.",
 };
 
 export default function WorkPage() {
@@ -18,28 +18,35 @@ export default function WorkPage() {
         <div className="max-w-3xl space-y-6">
           <SectionLabel tone="gold">EVIDENCE</SectionLabel>
           <h1 className="font-[var(--font-display)] text-[44px] leading-[1.1] text-[var(--text-primary)] md:text-[58px]">
-            Real systems. Real outcomes. Real constraints.
+            Quantified case systems, not concept decks.
           </h1>
           <p className="text-[17px] leading-[1.6] text-[var(--text-secondary)]">
-            52 repositories across AI engineering, ops automation, dashboards,
-            and India market intelligence. Below are the flagship builds.
+            Each case below shows operating context, measurable movement, and the
+            production artifact that teams used after deployment.
           </p>
           <div className="flex flex-wrap gap-2 pt-2">
-            <Tag active>Production-first</Tag>
-            <Tag>Ops-integrated</Tag>
-            <Tag>Decision-driven</Tag>
+            <Tag active>Metric-first</Tag>
+            <Tag>Context-aware</Tag>
+            <Tag>Production evidence</Tag>
           </div>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {caseStudyHighlights.map((c) => (
             <Card key={c.title} accent="gold">
+              <div className="flex flex-wrap items-center gap-2">
+                <Tag active>{c.outcome}</Tag>
+                <Tag>{c.timeframe}</Tag>
+              </div>
               <div className="font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
-                {c.title}
+                {c.title} - {c.context}
               </div>
               <p className="mt-3 text-[15px] leading-[1.65] text-[var(--text-secondary)]">
                 {c.body}
               </p>
+              <div className="mt-4 rounded-[var(--radius-2)] border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.018)] px-4 py-3 text-[13px] leading-[1.6] text-[var(--text-secondary)]">
+                Artifact: {c.artifact}
+              </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {c.tags.map((t) => (
                   <Tag key={t}>{t}</Tag>
@@ -59,11 +66,11 @@ export default function WorkPage() {
           <div className="mt-4 grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <div className="font-[var(--font-display)] text-[24px] font-semibold text-[var(--text-primary)]">
-                Want the full repository map?
+                Want the full system map with outcomes?
               </div>
               <p className="mt-2 text-[15px] leading-[1.65] text-[var(--text-secondary)]">
-                I can share a curated walkthrough of the 52 builds, organized by
-                outcome and system layer.
+                I can share a curated walkthrough of 52 builds organized by
+                business decision, stack layer, and measured impact.
               </p>
             </div>
             <Button href="/engage" variant="primary">

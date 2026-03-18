@@ -4,7 +4,10 @@ export const site = {
   domain: "pooravkadiyan.com",
   email: "hello@pooravkadiyan.com",
   oneLiner:
-    "I build executive-grade intelligence systems—from decision-ready data to deployed models to operational workflows—at the intersection of AI engineering, business strategy, and India market intelligence.",
+    "I design and deploy decision systems for operators who need measurable business movement in weeks, not quarters.",
+  credential:
+    "Built 52 production systems across collections, revenue forecasting, workflow automation, and India market intelligence.",
+  contrastLine: "Top-tier consulting rigor. Operator-speed execution.",
   positioning: {
     why:
       "Most firms deliver analysis. Most engineers deliver components. Very few deliver deployed intelligence systems that change how decisions get made.",
@@ -15,66 +18,80 @@ export const site = {
 
 export const homeCopy = {
   hero: {
-    label: "THE HOOK",
+    label: "FOR OPERATORS WHO OWN P&L OUTCOMES",
     headline: "Intelligence systems that upgrade decisions in days.",
     lead:
-      "I build and ship intelligence systems—data → models → deployed workflows—designed to move real operations, with the rigor of top-tier consulting and the speed of an operator.",
-    tags: ["Systems thinking", "Fast execution", "India MSME depth", "Multi-agent + MLOps"],
+      "Built for mid-market operators in NBFC, manufacturing, and B2B services: fix one high-stakes decision flow first, then compound gains across the business.",
+    support:
+      "From messy operational data to deployed decision workflows in production.",
+    tags: ["NBFC collections", "Manufacturing planning", "B2B operations"],
     ctas: {
-      primary: { href: "/engage", label: "Book a build sprint" },
-      secondary: { href: "/work", label: "See case studies" },
-      premium: { href: "/intelligence", label: "Explore services" },
+      primary: { href: "/engage", label: "Start a 10-day pilot" },
+      secondary: { href: "/work", label: "See quantified case systems" },
     },
+    outcomes: [
+      {
+        metric: "-41%",
+        detail: "manual decision time in collections workflows",
+      },
+      {
+        metric: "+18%",
+        detail: "recovery lift inside the first 90 days",
+      },
+      {
+        metric: "-23%",
+        detail: "inventory variance after demand workflow rollout",
+      },
+    ],
     proof: {
-      eyebrow: "RECENT PROOF",
-      headline: "Deployed systems. Measurable outcomes.",
+      eyebrow: "RECENT OUTCOMES",
+      headline: "Concrete impact from deployed systems",
       bullets: [
-        "Operational dashboards + action workflows (not just analysis)",
-        "Inference APIs wired into teams’ daily decisions",
-        "Feedback loops that compound over quarters",
+        "Debt operations: triage + next-action scoring deployed to daily teams",
+        "Revenue forecasting: one API serving risk, churn, and propensity calls",
+        "Ops automation: WhatsApp and dashboard actions wired to feedback loops",
       ],
-      link: { href: "/work", label: "Browse evidence" },
+      quote:
+        "\"We stopped debating reports and started acting on a live decision queue every morning.\"",
+      attribution: "COO, anonymized mid-market operator",
+      link: { href: "/work", label: "Open case systems" },
+    },
+    pathways: [
+      {
+        title: "Case systems",
+        body: "Before/after metrics, operating context, and shipped artifacts.",
+        href: "/work",
+      },
+      {
+        title: "Playbooks",
+        body: "Decision frameworks used to scope and ship in tight cycles.",
+        href: "/thinking",
+      },
+      {
+        title: "Signals",
+        body: "Short operator notes from active builds and field constraints.",
+        href: "/signal",
+      },
+    ],
+    pilot: {
+      eyebrow: "FIRST STEP",
+      headline: "Start with a 10-day pilot tied to one business metric.",
+      bullets: [
+        "Day 1-2: map the decision and baseline the current leak",
+        "Day 3-6: ship scoring logic + action surface for one team",
+        "Day 7-10: run live and measure movement against baseline",
+      ],
+      cta: { href: "/engage", label: "Design your first AI workflow" },
+    },
+    trust: {
+      eyebrow: "OPERATING CONTEXT",
+      title: "Built for messy, high-stakes environments",
+      items: [
+        "NBFC debt recovery and call-center queues",
+        "Manufacturing demand planning and inventory decisions",
+        "Founder-led teams scaling decision quality without large data teams",
+      ],
     },
   },
-  metrics: [
-    { kpi: "Time-to-decision", value: "weeks → days" },
-    { kpi: "Ops throughput", value: "+20–40%" },
-    { kpi: "Forecast error", value: "-10–25%" },
-    { kpi: "Automation coverage", value: "3–10x" },
-  ],
-  artifacts: [
-    { label: "Command center", meta: "ops dashboard + actions" },
-    { label: "Inference API", meta: "unified scoring endpoint" },
-    { label: "WhatsApp ops", meta: "workflow automation" },
-    { label: "RTI pipeline", meta: "source → decision" },
-    { label: "Patent intel", meta: "monitor + alerting" },
-    { label: "Land records", meta: "entity resolution" },
-  ],
-  pillars: [
-    {
-      tone: "blue",
-      sectionLabel: "WHAT I BUILD",
-      title: "The Intelligence Stack",
-      body: "Data foundation, model layer, unified inference API, action layer, feedback loops. Most vendors stop at three layers.",
-      href: "/intelligence",
-      cta: "View services",
-    },
-    {
-      tone: "blue",
-      sectionLabel: "HOW I THINK",
-      title: "Simulation-first strategy",
-      body: "Before spending ₹10Cr, run the decision 1,000 times. Model actors, incentives, uncertainty—then execute with conviction.",
-      href: "/thinking",
-      cta: "Explore frameworks",
-    },
-    {
-      tone: "gold",
-      sectionLabel: "EVIDENCE",
-      title: "Real systems shipped",
-      body: "Debt recovery command centers, revenue prediction APIs, WhatsApp automation, RTI pipelines, patent intelligence, land records.",
-      href: "/work",
-      cta: "See the work",
-    },
-  ],
 } as const;
 

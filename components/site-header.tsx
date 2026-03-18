@@ -6,11 +6,9 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 const nav = [
-  { href: "/intelligence", label: "Intelligence" },
-  { href: "/thinking", label: "Thinking" },
-  { href: "/work", label: "Work" },
-  { href: "/signal", label: "Signal" },
-  { href: "/engage", label: "Engage" },
+  { href: "/work", label: "Case systems" },
+  { href: "/thinking", label: "Playbooks" },
+  { href: "/signal", label: "Signals" },
 ] as const;
 
 export function SiteHeader() {
@@ -24,12 +22,12 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-[1000] border-b border-[rgba(255,255,255,0.08)] bg-[var(--glass-bg)] backdrop-blur-[18px]">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="group flex items-baseline gap-3">
+        <Link href="/" className="group flex flex-col gap-0.5">
           <span className="font-[var(--font-display)] text-[13px] font-semibold tracking-[0.07em] text-[var(--text-primary)]">
             POORAV KADIYAN
           </span>
-          <span className="hidden text-[10px] font-light uppercase tracking-[0.15em] text-[var(--accent-blue)] sm:inline">
-            Intelligence Architect
+          <span className="hidden text-[10px] font-light uppercase tracking-[0.12em] text-[var(--accent-blue)] sm:inline">
+            Consulting rigor. Operator speed.
           </span>
         </Link>
 
@@ -65,7 +63,7 @@ export function SiteHeader() {
             {menuOpen ? "Close" : "Menu"}
           </button>
           <Button href="/engage" variant="primary" className="h-10 px-5">
-            Engage
+            Start pilot
           </Button>
         </div>
       </div>
