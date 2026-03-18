@@ -120,19 +120,6 @@ body > * {
   backdrop-filter: blur(16px);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity var(--dur-2) var(--ease-out),
-    transform var(--dur-2) var(--ease-out);
-  will-change: opacity, transform;
-}
-
-.reveal[data-revealed="true"] {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .defer-render {
   content-visibility: auto;
   contain-intrinsic-size: 1px 960px;
