@@ -13,16 +13,14 @@ export default function Home() {
         <section className="grid gap-10 md:grid-cols-12 md:gap-x-8 md:gap-y-0">
           <div className="space-y-8 md:col-span-7">
             <SectionLabel tone="blue">{homeCopy.hero.label}</SectionLabel>
-            <h1 className="font-[var(--font-display)] text-[44px] leading-[1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[74px]">
+            <h1 className="font-[var(--font-display)] text-[44px] leading-[1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[60px] lg:text-[68px]">
               <span className="md:hidden">
                 Intelligence systems that upgrade decisions fast.
               </span>
-              <span className="hidden md:inline">
-                Intelligence systems
-                <br />
-                that upgrade
-                <br />
-                decisions fast.
+              <span className="hidden md:block">
+                <span className="block whitespace-nowrap">Intelligence systems</span>
+                <span className="block whitespace-nowrap">that upgrade</span>
+                <span className="block whitespace-nowrap">decisions fast.</span>
               </span>
             </h1>
             <p className="max-w-[58ch] text-[18px] leading-[1.76] text-[var(--text-secondary)] md:pr-2">
