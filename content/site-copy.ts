@@ -15,10 +15,9 @@ export const site = {
 
 export const homeCopy = {
   hero: {
-    label: "THE HOOK",
-    headline: "Intelligence systems that upgrade decisions in days.",
+    label: "SYSTEM THESIS",
     lead:
-      "I build and ship intelligence systems—data → models → deployed workflows—designed to move real operations, with the rigor of top-tier consulting and the speed of an operator.",
+      "I design and ship decision systems—data foundation, model layer, and operational workflows—with consulting-grade rigor and operator-grade speed.",
     tags: ["Systems thinking", "Fast execution", "India MSME depth", "Multi-agent + MLOps"],
     ctas: {
       primary: { href: "/engage", label: "Book a build sprint" },
@@ -27,11 +26,14 @@ export const homeCopy = {
     },
     proof: {
       eyebrow: "RECENT PROOF",
-      headline: "Deployed systems. Measurable outcomes.",
+      headline: "Deployed systems with visible operating lift.",
+      metricValue: "31%",
+      metricLabel: "faster decision cycle in 8 weeks",
+      miniFlow: ["Data layer", "Inference API", "Action workflow"],
       bullets: [
-        "Operational dashboards + action workflows (not just analysis)",
-        "Inference APIs wired into teams’ daily decisions",
-        "Feedback loops that compound over quarters",
+        "9 live dashboards tied to action workflows (not slideware)",
+        "47 daily inference calls embedded into operator routines",
+        "Weekly feedback loop that improves rankings and triggers",
       ],
       link: { href: "/work", label: "Browse evidence" },
     },
