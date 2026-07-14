@@ -1,23 +1,23 @@
-# Presentations
-
-## Advanced Search Techniques
+# Advanced Search Techniques (Grade 7)
 
 **File:** [`Advanced_Search_Techniques.pptx`](./Advanced_Search_Techniques.pptx)
 
-A 12-slide deck covering practical research search skills:
+A simple, kid-friendly 10-slide deck about searching smarter online.
 
-1. Title
-2. Agenda
-3. Why advanced search matters
-4. Boolean operators (AND, OR, NOT)
-5. Phrases, truncation & wildcards
-6. Field & web operators (`site:`, `filetype:`, etc.)
-7. Choosing the right search space
-8. Citation chaining & snowballing
-9. Evaluating sources
-10. Repeatable search workflow
-11. Quick cheat sheet with example queries
-12. Closing
+### What’s inside
+
+1. Title  
+2. What we’ll learn  
+3. Why search skills matter  
+4. Magic words: AND · OR · NOT  
+5. Quotes `" "` and the star `*`  
+6. Cool Google tricks  
+7. Where should you search?  
+8. Follow the trail of good sources  
+9. Can you trust this website?  
+10. Your turn — try these!
+
+Includes colorful cartoon images for each main idea.
 
 ### Regenerate
 
@@ -25,4 +25,4 @@ A 12-slide deck covering practical research search skills:
 python3 presentations/create_advanced_search_ppt.py
 ```
 
-Requires `python-pptx` (`pip install python-pptx`).
+Needs `python-pptx` (`pip install python-pptx`).
