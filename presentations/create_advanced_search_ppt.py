@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate Advanced Search Techniques PowerPoint presentation."""
 
+from pathlib import Path
+
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
@@ -371,7 +373,7 @@ def make_presentation():
                 "Thank you  ·  Practice on your next research question today",
                 size=15, color=WHITE)
 
-    out = "/workspace/presentations/Advanced_Search_Techniques.pptx"
+    out = str(Path(__file__).resolve().parent / "Advanced_Search_Techniques.pptx")
     prs.save(out)
     return out
 
